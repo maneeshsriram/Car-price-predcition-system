@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<img src="{% static './images/Carss.jpg' %}"
+    style="object-fit: contain; max-width: 100vw; opacity: 60%; position: absolute; z-index: -10;" class="homeBack">
+
+<div class="container" style="height: 115vh;">
+    <div class="bg-dark mt-5 py-5 container rounded">
+        <h1 class="text-center text-warning">Check the worthiness of your car!</h1>
+        <h3 class="text-center text-light">Designed for a smooth journey...</h3>
+    </div>
+
+    <div class="container text-center py-5">
+        <a href="#form">
+            <button class="btn btn-large btn-outline-dark w-md-50" style="font-size: 2rem">Click Here To Get
+                Started! </button>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Form -->
+<div class="container" id="form">
+    <form class="px-md-5 mx-md-5" action="{% url 'result' %}">
+
+        {% csrf_token %}
+
+        <h2 class="my-5 text-danger ">
+            Please input the below fields to predict the worthiness of the car
+        </h2>
+
+        <div class="my-4">
+            <h5 class="form-label">How old is the car</h5>
+            <input required type="number" name="year" class="form-control">
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label">Kilometers Driven</h5>
+            <input required type="number" type="text" name="Kilometers" class="form-control">
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label" style="display: inline">Owner Type</h5>
+            <p style="display: inline ">(Please select)</p>
+            <select name="Owner" required name="cars" class="form-select mt-2">
+                <option value="1" selected>First Hand</option>
+                <option value="2">Second Hand</option>
+                <option value="3">Third Hand</option>
+                <option value="4">Fourth and above</option>
+            </select>
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label">Mileage</h5>
+            <input name="mileage" type="number" required class="form-control">
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label">Engine</h5>
+            <input name="engine" type="number" required class="form-control">
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label">Power</h5>
+            <input name="power" type="number" required class="form-control">
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label">Number of seats</h5>
+            <input name="seats" required type="number" class="form-control">
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label" style="display: inline">Car Company</h5>
+            <p style="display: inline ">(Please select)</p>
+            <select name="car" required name="cars" class="form-select mt-2">
+                <option value="Audi A3">Audi A3</option>
+                <option>Audi A4</option>
+                <option>Audi A6</option>
+                <option>Audi A7</option>
+                <option>Audi A8</option>
+                <option>Audi Q3</option>
+                <option>Audi Q5</option>
+                <option>Audi Q7</option>
+                <option>Audi TT</option>
+                <option>BMW 1</option>
+                <option>BMW 3</option>
+                <option>BMW 5</option>
+                <option>BMW 7</option>
+                <option>BMW X1</option>
+                <option>BMW X3</option>
+                <option>BMW X5</option>
+                <option>BMW X6</option>
+                <option>Chevrolet Aveo</option>
+                <option>Chevrolet Beat</option>
+                <option>Chevrolet Captiva</option>
+                <option>Chevrolet Cruze</option>
+                <option>Chevrolet Enjoy</option>
+                <option>Chevrolet Optra</option>
+                <option>Chevrolet Sail</option>
+                <option>Chevrolet Spark</option>
+                <option>Chevrolet Tavera</option>
+                <option>Datsun GO</option>
+                <option>Datsun Redi</option>
+                <option>Datsun redi-GO</option>
+                <option>Fiat Avventura</option>
+                <option>Fiat Grande</option>
+                <option>Fiat Linea</option>
+                <option>Fiat Petra</option>
+                <option>Fiat Punto</option>
+                <option>Fiat Siena</option>
+                <option>Force One</option>
+                <option>Ford Aspire</option>
+                <option>Ford Classic</option>
+                <option>Ford Ecosport</option>
+                <option>Ford Endeavour</option>
+                <option>Ford Fiesta</option>
+                <option>Ford Figo</option>
+                <option>Ford Freestyle</option>
+                <option>Ford Fusion</option>
+                <option>Ford Ikon</option>
+                <option>Honda Accord</option>
+                <option>Honda Amaze</option>
+                <option>Honda BR-V</option>
+                <option>Honda BRV</option>
+                <option>Honda Brio</option>
+                <option>Honda CR-V</option>
+                <option>Honda City</option>
+                <option>Honda Civic</option>
+                <option>Honda Jazz</option>
+                <option>Honda Mobilio</option>
+                <option>Honda WR-V</option>
+                <option>Honda WRV</option>
+                <option>Hyundai Accent</option>
+                <option>Hyundai Creta</option>
+                <option>Hyundai EON</option>
+                <option>Hyundai Elantra</option>
+                <option>Hyundai Elite</option>
+                <option>Hyundai Getz</option>
+                <option>Hyundai Grand</option>
+                <option>Hyundai Santa</option>
+                <option>Hyundai Santro</option>
+                <option>Hyundai Sonata</option>
+                <option>Hyundai Tucson</option>
+                <option>Hyundai Verna</option>
+                <option>Hyundai Xcent</option>
+                <option>Hyundai i10</option>
+                <option>Hyundai i20</option>
+                <option>ISUZU D-MAX</option>
+                <option>Isuzu MUX</option>
+                <option>Jaguar XE</option>
+                <option>Jaguar XF</option>
+                <option>Jaguar XJ</option>
+                <option>Jeep Compass</option>
+                <option>Land Rover</option>
+                <option>Mahindra Bolero</option>
+                <option>Mahindra Jeep</option>
+                <option>Mahindra KUV</option>
+                <option>Mahindra Logan</option>
+                <option>Mahindra NuvoSport</option>
+                <option>Mahindra Quanto</option>
+                <option>Mahindra Renault</option>
+                <option>Mahindra Scorpio</option>
+                <option>Mahindra Ssangyong</option>
+                <option>Mahindra TUV</option>
+                <option>Mahindra Thar</option>
+                <option>Mahindra Verito</option>
+                <option>Mahindra XUV300</option>
+                <option>Mahindra XUV500</option>
+                <option>Mahindra Xylo</option>
+                <option>Maruti 1000</option>
+                <option>Maruti 800</option>
+                <option>Maruti A-Star</option>
+                <option>Maruti Alto</option>
+                <option>Maruti Baleno</option>
+                <option>Maruti Celerio</option>
+                <option>Maruti Ciaz</option>
+                <option>Maruti Dzire</option>
+                <option>Maruti Eeco</option>
+                <option>Maruti Ertiga</option>
+                <option>Maruti Esteem</option>
+                <option>Maruti Grand</option>
+                <option>Maruti Ignis</option>
+                <option>Maruti Omni</option>
+                <option>Maruti Ritz</option>
+                <option>Maruti S</option>
+                <option>Maruti S-Cross</option>
+                <option>Maruti SX4</option>
+                <option>Maruti Swift</option>
+                <option>Maruti Versa</option>
+                <option>Maruti Vitara</option>
+                <option>Maruti Wagon</option>
+                <option>Maruti Zen</option>
+                <option>Mercedes-Benz A</option>
+                <option>Mercedes-Benz B</option>
+                <option>Mercedes-Benz C-Class</option>
+                <option>Mercedes-Benz CLA</option>
+                <option>Mercedes-Benz CLS-Class</option>
+                <option>Mercedes-Benz E-Class</option>
+                <option>Mercedes-Benz GL-Class</option>
+                <option>Mercedes-Benz GLA</option>
+                <option>Mercedes-Benz GLC</option>
+                <option>Mercedes-Benz GLE</option>
+                <option>Mercedes-Benz GLS</option>
+                <option>Mercedes-Benz M-Class</option>
+                <option>Mercedes-Benz New</option>
+                <option>Mercedes-Benz R-Class</option>
+                <option>Mercedes-Benz S</option>
+                <option>Mercedes-Benz S-Class</option>
+                <option>Mini Clubman</option>
+                <option>Mini Cooper</option>
+                <option>Mini Countryman</option>
+                <option>Mitsubishi Cedia</option>
+                <option>Mitsubishi Lancer</option>
+                <option>Mitsubishi Montero</option>
+                <option>Mitsubishi Outlander</option>
+                <option>Mitsubishi Pajero</option>
+                <option>Nissan Evalia</option>
+                <option>Nissan Micra</option>
+                <option>Nissan Sunny</option>
+                <option>Nissan Teana</option>
+                <option>Nissan Terrano</option>
+                <option>Nissan X-Trail</option>
+                <option>Porsche Boxster</option>
+                <option>Porsche Cayenne</option>
+                <option>Porsche Cayman</option>
+                <option>Porsche Panamera</option>
+                <option>Renault Captur</option>
+                <option>Renault Duster</option>
+                <option>Renault Fluence</option>
+                <option>Renault KWID</option>
+                <option>Renault Koleos</option>
+                <option>Renault Lodgy</option>
+                <option>Renault Pulse</option>
+                <option>Renault Scala</option>
+                <option>Skoda Fabia</option>
+                <option>Skoda Laura</option>
+                <option>Skoda Octavia</option>
+                <option>Skoda Rapid</option>
+                <option>Skoda Superb</option>
+                <option>Skoda Yeti</option>
+                <option>Smart Fortwo</option>
+                <option>Tata Bolt</option>
+                <option>Tata Hexa</option>
+                <option>Tata Indica</option>
+                <option>Tata Indigo</option>
+                <option>Tata Manza</option>
+                <option>Tata Nano</option>
+                <option>Tata New</option>
+                <option>Tata Nexon</option>
+                <option>Tata Safari</option>
+                <option>Tata Sumo</option>
+                <option>Tata Tiago</option>
+                <option>Tata Tigor</option>
+                <option>Tata Venture</option>
+                <option>Tata Xenon</option>
+                <option>Tata Zest</option>
+                <option>Toyota Camry</option>
+                <option>Toyota Corolla</option>
+                <option>Toyota Etios</option>
+                <option>Toyota Fortuner</option>
+                <option>Toyota Innova</option>
+                <option>Toyota Platinum</option>
+                <option>Toyota Qualis</option>
+                <option>Volkswagen Ameo</option>
+                <option>Volkswagen Beetle</option>
+                <option>Volkswagen CrossPolo</option>
+                <option>Volkswagen Jetta</option>
+                <option>Volkswagen Passat</option>
+                <option>Volkswagen Polo</option>
+                <option>Volkswagen Tiguan</option>
+                <option>Volkswagen Vento</option>
+                <option>Volvo S60</option>
+                <option>Volvo S80</option>
+                <option>Volvo V40</option>
+                <option>Volvo XC60</option>
+                <option>Volvo XC90</option>
+            </select>
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label" style="display: inline">Location</h5>
+            <p style="display: inline ">(Please select the nearest location)</p>
+            <select name="location" required name="cars" class="form-select mt-2">
+                <option value="Bangalore" selected>Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+
+        <div class="my-4">
+            <h5 class="form-label" style="display: inline">Fuel Type</h5>
+            <p style="display: inline ">(Please select)</p>
+            <select name="fuel" required name="cars" class="form-select mt-2">
+                <option value="Petrol" selected>Petrol</option>
+                <option value="Diesel"> Diesel</option>
+                <option value="LPG">LPG</option>
+                <option value="CNG"> CNG</option>
+            </select>
+        </div>
+
+        <div class="text-center pb-5">
+            <button type="submit" class="btn btn-primary px-5 py-2 mt-3">Predict</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
