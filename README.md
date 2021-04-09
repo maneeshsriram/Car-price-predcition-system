@@ -3,12 +3,10 @@
 
 Install pipenv virtual environtment - `pip install pipenv`
 
-cd to the main directory, activate the shell and required dependencies -
-```
-pipenv shell
-pipenv install
-```
+cd to the main directory, activate the shell - `pipenv shell`
 
-`cd CarPredictionSystem`
+required dependencies - `pipenv install`
+
+Change directory - `cd CarPredictionSystem`
 
 Run the server - `python manage.py runserver`
