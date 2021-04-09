@@ -9,3 +9,6 @@ pipenv shell
 pipenv install
 ```
 
+`cd CarPredictionSystem`
+
+Run the server - `python manage.py runserver`
