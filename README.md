@@ -13,5 +13,5 @@ Run the server - `python manage.py runserver`
 
 Stack used : <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Frontend - HTML, CSS, Bootstrap <br />
-&nbsp; &nbsp; &nbsp; &nbsp; Backend - Django
+&nbsp; &nbsp; &nbsp; &nbsp; Backend - Django <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Database - PostgreSQL
