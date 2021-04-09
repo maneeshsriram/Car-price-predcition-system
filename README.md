@@ -5,7 +5,7 @@ Install pipenv virtual environtment - `pip install pipenv`
 
 cd to the main directory, activate the shell - `pipenv shell`
 
-required dependencies - `pipenv install`
+Install required dependencies - `pipenv install`
 
 Change directory - `cd CarPredictionSystem`
 
