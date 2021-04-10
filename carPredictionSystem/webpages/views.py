@@ -22,13 +22,13 @@ def result(request):
     model = joblib.load('finalizedmodel.sav')
 
     form = []
-    form.append(int(request.GET['year']))
-    form.append(int(request.GET['Kilometers']))
-    form.append(int(request.GET['Owner']))
-    form.append(int(request.GET['mileage']))
-    form.append(int(request.GET['engine']))
-    form.append(int(request.GET['power']))
-    form.append(int(request.GET['seats']))
+    form.append(float(request.GET['year']))
+    form.append(float(request.GET['Kilometers']))
+    form.append(float(request.GET['Owner']))
+    form.append(float(request.GET['mileage']))
+    form.append(float(request.GET['engine']))
+    form.append(float(request.GET['power']))
+    form.append(float(request.GET['seats']))
     form.append(request.GET['car'])
     form.append(request.GET['location'])
     form.append(request.GET['fuel'])
@@ -527,7 +527,7 @@ def result(request):
                                              'Fuel_Type_LPG',
                                              'Fuel_Type_Petrol'])
 
-    ans = model.predict(df)[0]
+    ans = round(model.predict(df)[0], 2)
 
     data = {
         'result': ans
