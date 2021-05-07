@@ -2,7 +2,7 @@
 
 {% block content %}
 
-
+{% if user.is_authenticated %}
 <div class="content my-5">
 
     <div class="container">
@@ -13,6 +13,13 @@
 
                     <form class="mb-5" method="POST" action="{% url 'contactUs' %}">
                         {% csrf_token %}
+
+                        {% if user.is_authenticated %}
+                        <input type="hidden" name="user_id" value="{{user.id}}">
+                        {% else %}
+                        <input type="hidden" name="user_id" value="00">
+                        {% endif %}
+
                         <div class="row">
                             <div class="col-md-6 form-group mb-3">
                                 <label class="col-form-label"> First Name *</label>
@@ -43,7 +50,6 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="user_id" value="00">
 
                         <div class="row">
                             <div class="col-md-12 form-group">
@@ -85,4 +91,5 @@
     </div>
 
 </div>
+{% endif %}
 {% endblock %}
