@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="text-center">
@@ -21,18 +21,20 @@
 </p>
 
 <div class="text-center mt-5 bg-dark">
-    <h1 class="my-4 btn btn-success px-5" style="font-size: 1.8rem;">Our Team</h1>
+    <h1 class="mt-4 btn btn-success px-5" style="font-size: 1.8rem;">Our Team</h1>
 </div>
 
-<div class="row text-center bg-dark text-light p-5">
+<div class="row text-center bg-dark text-light p-5 pt-3">
     <div class="col-sm">
+        <img src="{% static 'images/maneesh.jpg' %}" alt="" style="height: 250px;">
         <h3>Maneesh Sriram</h3>
-        <h5 class="text-secondary">Fullstack developer</h5>
+        <h5 class="text-secondary">Fullstack developer aspirant</h5>
         <h5 class="text-secondary">PES University</h5>
     </div>
     <div class="col-sm">
+        <img src="{% static 'images/chand.jpg' %}" alt="" style="height: 250px;">
         <h3>Chand Kumar</h3>
-        <h5 class="text-secondary">ML Engineer</h5>
+        <h5 class="text-secondary">Data scientist aspirant</h5>
         <h5 class="text-secondary">PES University</h5>
     </div>
 </div>
