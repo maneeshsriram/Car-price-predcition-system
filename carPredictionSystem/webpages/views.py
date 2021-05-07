@@ -32,7 +32,6 @@ def result(request):
     form.append(request.GET['car'])
     form.append(request.GET['location'])
     form.append(request.GET['fuel'])
-    print(form)
 
     arr = ['Year',
            'Kilometers_Driven',
@@ -530,7 +529,8 @@ def result(request):
     ans = round(model.predict(df)[0], 2)
 
     data = {
-        'result': ans
+        'result': ans,
+        'inputs': form
     }
 
     return render(request, 'webpages/result.html', data)
