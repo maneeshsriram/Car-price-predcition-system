@@ -12,4 +12,4 @@ class Contact(models.Model):
     user_id = models.IntegerField(blank=True)
 
     def __str__(self):
-        return self.full_name
+        return self.email
