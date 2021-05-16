@@ -20,3 +20,4 @@ Stack used : <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Frontend - HTML, CSS, Bootstrap <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Backend - Django <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Database - PostgreSQL
+ 
