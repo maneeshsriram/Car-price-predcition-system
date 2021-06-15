@@ -21,3 +21,4 @@ Stack used : <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Backend - Django <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Database - PostgreSQL
  
+Project link - https://car-price-prediction-django.herokuapp.com/
