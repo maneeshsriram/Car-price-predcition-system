@@ -22,3 +22,12 @@ Stack used : <br />
 &nbsp; &nbsp; &nbsp; &nbsp; Database - PostgreSQL
  
 Project link - https://car-price-prediction-django.herokuapp.com/
+
+User authentication
+![image](https://user-images.githubusercontent.com/65223389/122024083-bdc5e500-cde5-11eb-842c-fdafc955618d.png)
+
+Admin Panel authentication
+![image](https://user-images.githubusercontent.com/65223389/122024209-d8985980-cde5-11eb-9b82-c5b5c23b038a.png)
+
+Admin panel
+![image](https://user-images.githubusercontent.com/65223389/122024315-eea61a00-cde5-11eb-95b4-a09dec06c3e7.png)
